@@ -208,7 +208,7 @@
                  <img src="img/foto2.png" class="card-img-top" alt="...">
                  <div class="card-body">
                 <p class="card-text" class="text-center">Kalkulator sederhana menggunakan HTML dan CSS</p>
-                <a href="https://hanifw00.github.io/kalkulator-H/" class="btn btn-primary">Gunakan</a>
+                <a href="https://hanifw00.github.io/kalkulator-H/" target="_blank" class="btn btn-primary">Gunakan</a>
               </div>
             </div>
             </div>
@@ -219,36 +219,48 @@
     <!-- akhir section proyek -->
 
     <!-- section footer -->
-    <footer class="bg-light text-center" id="contact">
+    <footer class="bg-light text-center" id="contact">     
       <div class="container p-2 pb-0 mx-auto my-4">
         <h3 class="fs-4 fw-bold">Kritik dan Saran dipersilahkan!</h3>
         <div class="container justify-content-center">
           <div class="row">
-            <form>
+            <form id="kritkSaran">
           <div class="col col-lg-8 mx-auto mb-3">
             <label for="nama" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="nama">
+            <input type="text" class="form-control" id="nama" required>
           </div>
           <div class="col col-lg-8 mx-auto mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email">
+            <input type="email" class="form-control" id="email" required>
           </div>
           <div class="col col-lg-8 mx-auto form-floating mb-3">
-            Komentar anda!
-            <textarea class="form-control" id="comment" style="height: 120px">
+            Komentar anda
+            <textarea class="form-control" id="comment" style="height: 120px" required>
             </textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Kirim</button>
+          <button onclick="bacaInput()" class="btn btn-primary">Kirim</button>
         </form>
       </div>
         </div>
       </div>
       <div class="text-center p-3 mt-3" style="background-color: rgba(0, 0, 0, 0.2);">
         Dibuat oleh Hanif
+        
       </div>
     </footer>
     <!-- Akhir section footer -->
+    <script>
+      function bacaInput() {
+      var nama = document.getElementById("nama").value;
+      var email = document.getElementById("email").value;
+      var comment = document.getElementById("comment").value;
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+      console.log("Nama: " + nama);
+      console.log("Email: " + email);
+      console.log("Komentar: " + comment);
+
+      alert("Pesan Terkirim!");
+    }
+    </script>
   </body>
 </html>
